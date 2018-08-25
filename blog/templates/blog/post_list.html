@@ -1,11 +1,21 @@
 <html>
-<head>
-  <title>
-    Django Zindabad
-  </title>
-</head>
-<body>
-  hey there i am using Django...
-</body>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
 
+
+{% for Post in Posts %}
+<div>
+
+  <h1> <a href="">{{Post.title}}</a> </h1>
+  <p>{{Post.text|linebreaksbr}} </p>
+  <p> Published: {{Post.published_date}} </p>
+</div>
+{% endfor %}
+
+    </body>
 </html>
